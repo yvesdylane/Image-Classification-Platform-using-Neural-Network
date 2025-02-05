@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Prediction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+    <div class="flex items-center justify-center min-h-screen p-10">
+        <div class="flex w-full max-w-4xl bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+            <!-- Image Upload Section -->
+            <div class="w-1/2 p-6 flex flex-col items-center border-r border-gray-700">
+                <h1 class="text-2xl font-bold mb-4">Upload Image 🖼️</h1>
+                <form id="uploadForm" method="post" action="/predict" enctype="multipart/form-data" class="w-full space-y-4">
+                    <input 
+                        type="file" 
+                        id="Image" 
+                        name="Image" 
+                        accept="image/*" 
+                        class="w-full p-2 border border-gray-600 rounded bg-gray-700 text-gray-300"
+                        onchange="previewImage(event)"
+                    >
+                    <div id="imagePreview" class="hidden w-full mt-4 flex justify-center">
+                        <img id="preview" class="max-w-full h-auto rounded-lg" />
+                    </div>
+                    <button 
+                        type="submit" 
+                        class="w-full py-2 px-4 bg-gray-600 text-white font-semibold rounded-md shadow hover:bg-gray-500 transition-all"
+                    >
+                        Submit
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Prediction Result Section -->
+            <div class="w-1/2 p-6 flex flex-col items-center">
+                <h3 class="text-2xl font-bold mb-4">Prediction Result 🔍</h3>
+                {% if result %}
+                <p class="text-lg text-gray-300">Predicted Cluster: <span class="font-semibold text-blue-400">{{ result }}</span></p>
+                {% else %}
+                <p class="text-gray-500">No prediction yet</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function previewImage(event) {
+            const preview = document.getElementById('preview');
+            const imagePreview = document.getElementById('imagePreview');
+            
+            if (event.target.files.length > 0) {
+                const src = URL.createObjectURL(event.target.files[0]);
+                preview.src = src;
+                imagePreview.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
