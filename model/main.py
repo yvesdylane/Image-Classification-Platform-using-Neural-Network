@@ -196,10 +196,10 @@ class FashionMNISTClustering:
 
         return predicted_cluster
 
-    def save_model(self, save_path='fashion_mnist_model.joblib'):
+    def save_model(self, save_path='../models/v1.0/model.joblib'):
         """
         Save the trained model components to disk
-        
+
         Args:
             save_path: Path to save the model
         """
@@ -208,23 +208,24 @@ class FashionMNISTClustering:
             'pca': self.pca,
             'clusterer': self.clusterer,
             'cluster_labels': self.cluster_labels,
-            'target_names': self.target_names
+            'target_names': self.target_names,
+            'features': self.features  # Add features
         }
 
         joblib.dump(components, save_path)
         print(f"Model saved to {save_path}")
 
-    def load_model(self, model_path='fashion_mnist_model.joblib'):
+    def load_model(self, model_path='../models/v1.0/model.joblib'):
         """
         Load a previously saved model
-        
+
         Args:
             model_path: Path to the saved model
         """
         components = joblib.load(model_path)
 
         # Ensure all required components are loaded
-        required_keys = ['scaler', 'pca', 'clusterer', 'cluster_labels', 'target_names']
+        required_keys = ['scaler', 'pca', 'clusterer', 'cluster_labels', 'target_names', 'features']
         for key in required_keys:
             if key not in components or components[key] is None:
                 raise ValueError(f"Missing or invalid component '{key}' in the saved model.")
@@ -234,6 +235,7 @@ class FashionMNISTClustering:
         self.clusterer = components['clusterer']
         self.cluster_labels = components['cluster_labels']
         self.target_names = components['target_names']
+        self.features = components['features']  # Load features
 
         print("Model loaded successfully")
 
