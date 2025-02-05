@@ -1,2 +1,0 @@
-from main import FashionMNISTClustering
-from process import process_image

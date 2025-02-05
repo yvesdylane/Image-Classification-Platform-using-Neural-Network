@@ -1,0 +1,72 @@
+2025-02-05 19:05:24,957 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.104.1.73:8080
+2025-02-05 19:05:24,957 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-05 19:05:24,978 - INFO -  * Restarting with stat
+2025-02-05 19:05:26,417 - WARNING -  * Debugger is active!
+2025-02-05 19:05:26,573 - INFO -  * Debugger PIN: 118-752-395
+2025-02-05 19:05:29,864 - INFO - Incoming request: GET http://127.0.0.1:8080/
+2025-02-05 19:05:29,870 - INFO - Outgoing response: 200 OK
+2025-02-05 19:05:29,871 - INFO - 127.0.0.1 - - [05/Feb/2025 19:05:29] "GET / HTTP/1.1" 200 -
+2025-02-05 19:05:32,623 - INFO - Incoming request: GET http://127.0.0.1:8080/favicon.ico
+2025-02-05 19:05:32,624 - INFO - Outgoing response: 404 NOT FOUND
+2025-02-05 19:05:32,624 - INFO - 127.0.0.1 - - [05/Feb/2025 19:05:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-05 19:06:00,561 - INFO - Incoming request: POST http://127.0.0.1:8080/predict
+2025-02-05 19:06:00,562 - INFO - Loading model from: models/v1.0/model.joblib
+2025-02-05 19:06:02,346 - INFO - Model loaded successfully.
+2025-02-05 19:06:02,491 - ERROR - Error: Model has not been trained or clusters are not available.
+2025-02-05 19:06:02,501 - INFO - Outgoing response: 200 OK
+2025-02-05 19:06:02,502 - INFO - 127.0.0.1 - - [05/Feb/2025 19:06:02] "POST /predict HTTP/1.1" 200 -
+2025-02-05 19:06:21,309 - INFO - Incoming request: POST http://127.0.0.1:8080/predict
+2025-02-05 19:06:21,310 - INFO - Loading model from: models/v1.0/model.joblib
+2025-02-05 19:06:21,446 - INFO - Model loaded successfully.
+2025-02-05 19:06:21,452 - ERROR - Error: Model has not been trained or clusters are not available.
+2025-02-05 19:06:21,454 - INFO - Outgoing response: 200 OK
+2025-02-05 19:06:21,454 - INFO - 127.0.0.1 - - [05/Feb/2025 19:06:21] "POST /predict HTTP/1.1" 200 -
+2025-02-05 19:10:29,533 - INFO -  * Detected change in '/home/yveane/Documents/school/ai/customer/exam/model/main.py', reloading
+2025-02-05 19:10:31,061 - INFO -  * Restarting with stat
+2025-02-05 19:43:30,919 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.104.1.73:8080
+2025-02-05 19:43:30,942 - INFO - [33mPress CTRL+C to quit[0m
+2025-02-05 19:43:30,945 - INFO -  * Restarting with stat
+2025-02-05 19:43:32,338 - WARNING -  * Debugger is active!
+2025-02-05 19:43:32,431 - INFO -  * Debugger PIN: 118-752-395
+2025-02-05 19:43:37,237 - INFO - Incoming request: GET http://127.0.0.1:8080/
+2025-02-05 19:43:37,327 - INFO - Outgoing response: 200 OK
+2025-02-05 19:43:37,328 - INFO - 127.0.0.1 - - [05/Feb/2025 19:43:37] "GET / HTTP/1.1" 200 -
+2025-02-05 19:43:37,377 - INFO - Incoming request: GET http://127.0.0.1:8080/
+2025-02-05 19:43:37,377 - INFO - Outgoing response: 200 OK
+2025-02-05 19:43:37,378 - INFO - 127.0.0.1 - - [05/Feb/2025 19:43:37] "GET / HTTP/1.1" 200 -
+2025-02-05 19:43:47,937 - INFO - Incoming request: POST http://127.0.0.1:8080/predict
+2025-02-05 19:43:47,938 - INFO - Loading model from: models/v1.0/model.joblib
+2025-02-05 19:43:48,091 - INFO - Model loaded successfully.
+2025-02-05 19:43:48,299 - INFO - Predicted Cluster: T-Shirt
+2025-02-05 19:43:48,381 - ERROR - Cluster T-Shirt not found in representatives.
+2025-02-05 19:43:48,382 - ERROR - Error: Cluster T-Shirt is invalid or not mapped to any representative.
+2025-02-05 19:43:48,383 - INFO - Outgoing response: 200 OK
+2025-02-05 19:43:48,383 - INFO - 127.0.0.1 - - [05/Feb/2025 19:43:48] "POST /predict HTTP/1.1" 200 -
+2025-02-05 19:47:21,977 - INFO -  * Detected change in '/home/yveane/Documents/school/ai/customer/exam/app.py', reloading
+2025-02-05 19:47:22,664 - INFO -  * Restarting with stat
+2025-02-05 19:47:24,583 - WARNING -  * Debugger is active!
+2025-02-05 19:47:24,589 - INFO -  * Debugger PIN: 118-752-395
+2025-02-05 19:47:32,636 - INFO - Incoming request: POST http://127.0.0.1:8080/predict
+2025-02-05 19:47:32,637 - INFO - Loading model from: models/v1.0/model.joblib
+2025-02-05 19:47:32,760 - INFO - Model loaded successfully.
+2025-02-05 19:47:32,788 - INFO - Predicted Cluster: T-Shirt
+2025-02-05 19:47:32,792 - INFO - Outgoing response: 200 OK
+2025-02-05 19:47:32,793 - INFO - 127.0.0.1 - - [05/Feb/2025 19:47:32] "POST /predict HTTP/1.1" 200 -
+2025-02-05 19:48:29,599 - INFO - Incoming request: POST http://127.0.0.1:8080/predict
+2025-02-05 19:48:29,599 - INFO - Loading model from: models/v1.0/model.joblib
+2025-02-05 19:48:29,732 - INFO - Model loaded successfully.
+2025-02-05 19:48:29,924 - INFO - Predicted Cluster: T-Shirt
+2025-02-05 19:48:29,927 - INFO - Outgoing response: 200 OK
+2025-02-05 19:48:29,927 - INFO - 127.0.0.1 - - [05/Feb/2025 19:48:29] "POST /predict HTTP/1.1" 200 -
+2025-02-05 19:48:47,316 - INFO - Incoming request: POST http://127.0.0.1:8080/predict
+2025-02-05 19:48:47,316 - INFO - Loading model from: models/v1.0/model.joblib
+2025-02-05 19:48:47,434 - INFO - Model loaded successfully.
+2025-02-05 19:48:47,471 - INFO - Predicted Cluster: T-Shirt
+2025-02-05 19:48:47,472 - INFO - Outgoing response: 200 OK
+2025-02-05 19:48:47,473 - INFO - 127.0.0.1 - - [05/Feb/2025 19:48:47] "POST /predict HTTP/1.1" 200 -
