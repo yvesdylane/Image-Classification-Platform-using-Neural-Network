@@ -31,7 +31,7 @@ To design and develop an end-to-end platform for classifying images using a neur
 - 🧪 **Postman/cURL** for API testing
 
 ### 📂 Dataset
-We utilized the pre-trained model from **Lab 4** for image recognition.
+We utilized the pre-trained model from **Fashionminst dataset** for image recognition.
 
 ---
 
